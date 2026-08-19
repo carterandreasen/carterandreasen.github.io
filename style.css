@@ -132,7 +132,7 @@ body::after {
     transform: scale(1.8);
     
     /* Change/remove this if you want the entire image visible */
-    object-position: center 20%;
+    object-position: center -10%;
 }
 
 /* -------------------- */
