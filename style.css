@@ -124,6 +124,8 @@ body::after {
     
     /* Change/remove this if you want the entire image visible */
     object-position: center 20%;
+
+    transform: scale(1.2);
 }
 
 /* -------------------- */
