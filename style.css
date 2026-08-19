@@ -129,10 +129,10 @@ body::after {
     height: 100%;
 
     object-fit: cover;
-    transform: scale(1.4);
+    transform: scale(1.2);
     
     /* Change/remove this if you want the entire image visible */
-    object-position: center -160%;
+    object-position: center -140%;
 }
 
 /* -------------------- */
