@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Your Name</title>
+  <meta name="description" content="Work and internship experience of Your Name.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- SIDEBAR — same as index.html, but "Experience" is marked active -->
+    <header class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div>
+          <a href="index.html" class="site-name">Your Name</a>
+          <p class="site-tagline">Your Major, Class of 20XX</p>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">Menu</button>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html" class="active" aria-current="page">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="assets/resume.pdf" class="resume-link">Resume (PDF)</a>
+        <div class="social-links">
+          <a href="https://github.com/yourusername">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content" id="main-content">
+      <div class="content-inner">
+
+        <div class="page-intro">
+          <h1>Experience</h1>
+          <p>Internships, jobs, and other roles I've held.</p>
+        </div>
+
+        <!-- ==============================================================
+             TIMELINE — one .timeline-entry per role. Copy the whole
+             block to add another job. Most recent role first is the
+             usual convention.
+             ============================================================== -->
+        <div class="timeline">
+
+          <!-- TODO: duplicate this entire .timeline-entry block for each
+               job/internship you want to list -->
+          <div class="timeline-entry">
+            <div class="timeline-date">
+              <!-- TODO: replace with actual dates -->
+              Summer 2026
+            </div>
+            <div class="timeline-details">
+              <!-- TODO: your job title -->
+              <h3>Software Engineering Intern</h3>
+              <!-- TODO: company name and location -->
+              <p class="timeline-org">Company Name, City, State</p>
+
+              <!-- TODO: replace with 2–4 bullet points describing what you
+                   actually did and, where possible, the result — e.g.
+                   "Rebuilt the onboarding flow, cutting drop-off by 12%." -->
+              <ul>
+                <li>Describe a specific task or project you owned.</li>
+                <li>Describe another contribution, ideally with a measurable result.</li>
+                <li>Mention any tools, languages, or frameworks you used day to day.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-entry">
+            <div class="timeline-date">
+              Fall 2025 – Present
+            </div>
+            <div class="timeline-details">
+              <h3>Job Title</h3>
+              <p class="timeline-org">Organization Name, City, State</p>
+              <ul>
+                <li>Describe a specific responsibility or achievement.</li>
+                <li>Describe another, ideally with a number attached (time saved, users reached, etc).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Not required, but many student portfolios also list
+               leadership roles, TA positions, or club involvement here
+               using the same format. -->
+
+        </div>
+
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Your Name. Built with HTML, CSS, and JS.</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

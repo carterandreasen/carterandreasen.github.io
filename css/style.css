@@ -1,0 +1,555 @@
+/* ==========================================================================
+   PORTFOLIO SITE STYLESHEET
+   ==========================================================================
+   This file is shared by every page (index.html, education.html,
+   experience.html, projects.html, contact.html). Change something here
+   and it updates the whole site at once.
+
+   Jump to a section using your editor's search:
+   1. THEME TOKENS   — colors, fonts, sizing. Edit these first.
+   2. RESET & BASE   — sensible defaults, typography scale
+   3. LAYOUT         — sidebar + main content shell
+   4. NAVIGATION     — sidebar nav + mobile menu toggle
+   5. COMPONENTS     — buttons, tags, timeline entries, project list
+   6. PAGE-SPECIFIC  — small tweaks used on one page only
+   7. FOOTER
+   8. RESPONSIVE     — mobile layout (screens under 800px)
+   9. ACCESSIBILITY  — focus states, reduced motion, skip link
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. THEME TOKENS
+   These CSS variables control the whole site's look. Change a value here
+   and every page updates automatically. Swap the hex codes to re-theme
+   the site without touching any other part of this file.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Text & background colors */
+  --color-ink: #1b2430;        /* headings and primary text */
+  --color-ink-soft: #454e5c;   /* body paragraphs */
+  --color-muted: #7a7668;      /* dates, locations, meta labels */
+  --color-paper: #faf9f5;      /* page background */
+  --color-panel: #f1eee4;      /* tag backgrounds, subtle panels */
+  --color-line: #ddd8cb;       /* hairline borders and dividers */
+
+  /* Accent (used for links, active nav item, highlights) */
+  --color-accent: #33508f;
+  --color-accent-soft: #e4e9f2;
+
+  /* Fonts — loaded via Google Fonts link tag in each page's <head> */
+  --font-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+  /* Layout sizing */
+  --sidebar-width: 250px;
+  --measure: 640px; /* max width for readable paragraph text */
+  --radius: 3px;    /* small, consistent corner radius used everywhere */
+}
+
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink-soft);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  font-weight: 500;
+}
+
+h1 { font-size: clamp(2.25rem, 4vw + 1rem, 3.4rem); font-weight: 500; }
+h2 { font-size: clamp(1.5rem, 2vw + 1rem, 2rem); margin-top: 0; }
+h3 { font-size: 1.25rem; margin-bottom: 0.3em; }
+
+p {
+  margin: 0 0 1.1em;
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+ul, ol {
+  padding-left: 1.2em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Small, uppercase-free meta text style used for dates, locations, etc. */
+.meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT
+   Every page uses the same shell: a sidebar (site name + nav) on the
+   left, and a main content column on the right.
+   -------------------------------------------------------------------------- */
+.layout {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 1.75rem;
+  border-right: 1px solid var(--color-line);
+}
+
+.content {
+  flex: 1;
+  min-width: 0; /* prevents flex overflow on long unbreakable text */
+  padding: 3.5rem 3rem 5rem;
+}
+
+.content-inner {
+  max-width: 760px;
+}
+
+.page-intro {
+  margin-bottom: 3rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION
+   -------------------------------------------------------------------------- */
+.site-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: none;
+  display: block;
+}
+
+.site-tagline {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+}
+
+.site-nav li + li {
+  margin-top: 0.15rem;
+}
+
+.site-nav a {
+  position: relative;
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: var(--color-ink-soft);
+  text-decoration: none;
+  font-size: 0.98rem;
+}
+
+/* Underline-draw effect on hover/focus — the site's one deliberate
+   motion moment. Respects prefers-reduced-motion, see section 9. */
+.site-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0.25rem;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width 0.2s ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  width: 100%;
+}
+
+/* Current page indicator — set by adding class="active" to the
+   matching <a> in each page's sidebar nav. See any HTML file for
+   an example. */
+.site-nav a.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.site-nav a.active::after {
+  width: 100%;
+}
+
+.sidebar-bottom {
+  margin-top: 2.5rem;
+}
+
+.resume-link {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 0.1rem;
+}
+
+.social-links {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.social-links a {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Mobile menu toggle button — hidden on desktop, shown under 800px */
+.nav-toggle {
+  display: none;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. COMPONENTS
+   -------------------------------------------------------------------------- */
+
+/* --- Buttons / CTA links (used on the homepage hero) --- */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 1.75rem 0 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--color-ink);
+}
+
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* --- Quick facts row on the homepage (school / location / grad year) --- */
+.quick-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 2rem 0 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.quick-facts div {
+  font-size: 0.95rem;
+}
+
+.quick-facts span {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
+}
+
+/* --- Tags (used for skills / tech stack) --- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  list-style: none;
+}
+
+.tag {
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  background: var(--color-panel);
+  border-radius: var(--radius);
+  padding: 0.25rem 0.6rem;
+}
+
+/* --- Timeline entries (Education & Experience pages) ---
+   Each entry is a two-column row: a date on the left, details on the
+   right. This mirrors a transcript / CV layout, which fits the content
+   since education and experience are genuinely chronological. */
+.timeline {
+  border-top: 1px solid var(--color-line);
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.timeline-date {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+.timeline-org {
+  color: var(--color-muted);
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.timeline-details ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1em;
+}
+
+.timeline-details li {
+  margin-bottom: 0.4em;
+}
+
+/* --- Project list (Projects page) ---
+   Uses the same date-column rhythm as the timeline for visual
+   consistency across the site. */
+.project-entry {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.project-links {
+  margin-top: 0.85rem;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. PAGE-SPECIFIC TWEAKS
+   -------------------------------------------------------------------------- */
+
+/* Homepage hero */
+.hero p.lede {
+  font-size: 1.15rem;
+  color: var(--color-ink-soft);
+}
+
+/* Homepage "selected work" preview list */
+.preview-list {
+  margin-top: 1rem;
+}
+
+.preview-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.preview-item:first-child {
+  border-top: 1px solid var(--color-line);
+}
+
+.preview-item h3 {
+  margin-bottom: 0.25rem;
+}
+
+/* Contact page */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.contact-list li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-line);
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.contact-list span {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  min-width: 90px;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. RESPONSIVE — under 800px, the sidebar becomes a collapsible top bar
+   -------------------------------------------------------------------------- */
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-line);
+    padding: 1.25rem 1.5rem;
+  }
+
+  .sidebar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    background: none;
+    border: 1px solid var(--color-ink);
+    border-radius: var(--radius);
+    padding: 0.4rem 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-ink);
+    cursor: pointer;
+  }
+
+  /* Nav + resume + social links are hidden until the menu is opened.
+     JS toggles the .is-open class — see js/script.js */
+  .site-nav,
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .sidebar.is-open .site-nav,
+  .sidebar.is-open .sidebar-bottom {
+    display: block;
+  }
+
+  .site-nav {
+    margin-top: 1.5rem;
+  }
+
+  .content {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .timeline-entry,
+  .project-entry {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   9. ACCESSIBILITY
+   -------------------------------------------------------------------------- */
+
+/* Skip-to-content link, visible only when focused (e.g. tabbing with
+   a keyboard). Present on every page just after <body>. */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 0.75rem 1.25rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* Visible focus outline for keyboard users on every interactive element */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

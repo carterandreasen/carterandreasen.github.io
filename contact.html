@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Your Name</title>
+  <meta name="description" content="Get in touch with Your Name.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- SIDEBAR — same as index.html, but "Contact" is marked active -->
+    <header class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div>
+          <a href="index.html" class="site-name">Your Name</a>
+          <p class="site-tagline">Your Major, Class of 20XX</p>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">Menu</button>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="assets/resume.pdf" class="resume-link">Resume (PDF)</a>
+        <div class="social-links">
+          <a href="https://github.com/yourusername">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content" id="main-content">
+      <div class="content-inner">
+
+        <div class="page-intro">
+          <h1>Get in touch</h1>
+          <!-- TODO: replace with your own line -->
+          <p>The best way to reach me is by email. I'm happy to talk about internships, collaboration, or anything I've built.</p>
+        </div>
+
+        <!-- ==============================================================
+             CONTACT LIST — plain links, no contact form. A static site
+             hosted on GitHub Pages has no server to process form
+             submissions, so this avoids a form that silently fails.
+
+             If you'd like an actual working contact form, look into a
+             free form backend service like Formspree (formspree.io) or
+             Getform — they give you an endpoint you can point a plain
+             HTML <form> at, with no backend code of your own required.
+             ============================================================== -->
+        <ul class="contact-list">
+          <li>
+            <span>Email</span>
+            <!-- TODO: replace with your real email -->
+            <a href="mailto:you@example.com">you@example.com</a>
+          </li>
+          <li>
+            <span>GitHub</span>
+            <a href="https://github.com/yourusername">github.com/yourusername</a>
+          </li>
+          <li>
+            <span>LinkedIn</span>
+            <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a>
+          </li>
+          <!-- TODO: add or remove rows as needed — e.g. a personal
+               blog, Twitter/X, Instagram for design work, etc. -->
+        </ul>
+
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Your Name. Built with HTML, CSS, and JS.</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

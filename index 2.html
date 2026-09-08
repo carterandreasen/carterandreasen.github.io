@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ====================================================================
+       TODO: Replace "Your Name" below with your actual name. This text
+       shows up as the browser tab title and in search results.
+       ==================================================================== -->
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a [Your Major] student at [Your University].">
+
+  <!-- Fonts: Newsreader (headings) + IBM Plex Sans (body text).
+       To use a different pairing, swap this URL for one from
+       https://fonts.google.com and update --font-display / --font-body
+       in css/style.css to match. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip link: lets keyboard users jump straight to the main content,
+       bypassing the sidebar nav. Only becomes visible when tabbed to. -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ==================================================================
+         SIDEBAR — identical on every page except for which nav link has
+         the "active" class. Copy this whole <header> block into any new
+         page you add, then update the active link.
+         ================================================================== -->
+    <header class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div>
+          <!-- TODO: replace with your name -->
+          <a href="index.html" class="site-name">Your Name</a>
+          <!-- TODO: replace with your major / focus, e.g. "Computer Science, B.S." -->
+          <p class="site-tagline">Your Major, Class of 20XX</p>
+        </div>
+        <!-- Mobile-only menu button; hidden on desktop via CSS -->
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">Menu</button>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <!-- TODO: add a PDF of your resume to the assets/ folder and
+             confirm this filename matches it -->
+        <a href="assets/resume.pdf" class="resume-link">Resume (PDF)</a>
+        <div class="social-links">
+          <!-- TODO: replace with your real profile URLs -->
+          <a href="https://github.com/yourusername">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================================================================
+         MAIN CONTENT — this part is unique to the homepage.
+         ================================================================ -->
+    <main class="content" id="main-content">
+      <div class="content-inner">
+
+        <!-- HERO ---------------------------------------------------------
+             The first thing a visitor reads. Keep it short: who you are,
+             what you study, and what you're looking for (internship,
+             new grad role, research, etc). -->
+        <section class="hero">
+          <!-- TODO: replace with a one-line intro headline -->
+          <h1>Hi, I'm Your Name.</h1>
+
+          <!-- TODO: replace with 2–3 sentences about yourself: your
+               school, what you're studying, and what kind of work or
+               opportunity you're looking for right now. -->
+          <p class="lede">
+            I'm a [year, e.g. junior] studying [your major] at [your university].
+            I'm interested in [areas you like — e.g. web development, machine
+            learning, product design], and I'm currently looking for
+            [internship / new grad opportunities / research positions].
+          </p>
+
+          <div class="button-row">
+            <a href="projects.html" class="btn btn-primary">See my projects</a>
+            <a href="contact.html" class="btn btn-secondary">Get in touch</a>
+          </div>
+
+          <!-- Quick facts strip — trim or extend this list freely -->
+          <div class="quick-facts">
+            <div>
+              <span>School</span>
+              <!-- TODO -->
+              Your University
+            </div>
+            <div>
+              <span>Location</span>
+              <!-- TODO -->
+              City, State
+            </div>
+            <div>
+              <span>Graduating</span>
+              <!-- TODO -->
+              Month 20XX
+            </div>
+          </div>
+        </section>
+
+        <!-- SELECTED WORK --------------------------------------------
+             A short preview of 2–3 projects, each linking to the full
+             write-up on projects.html. Keep this list short — the
+             Projects page is where the full detail lives. -->
+        <section aria-labelledby="selected-work-heading" style="margin-top: 3.5rem;">
+          <h2 id="selected-work-heading">Selected work</h2>
+
+          <div class="preview-list">
+            <!-- TODO: repeat this block for each featured project, or
+                 delete extra copies if you only want to feature one or two -->
+            <div class="preview-item">
+              <h3>Project One Name</h3>
+              <p class="meta">Brief one-line description of what it does and the tech you used.</p>
+            </div>
+
+            <div class="preview-item">
+              <h3>Project Two Name</h3>
+              <p class="meta">Brief one-line description of what it does and the tech you used.</p>
+            </div>
+
+            <div class="preview-item">
+              <h3>Project Three Name</h3>
+              <p class="meta">Brief one-line description of what it does and the tech you used.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- FOOTER — identical on every page -->
+      <footer class="site-footer">
+        <!-- The year below fills in automatically via js/script.js -->
+        <p>&copy; <span id="year">2026</span> Your Name. Built with HTML, CSS, and JS.</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

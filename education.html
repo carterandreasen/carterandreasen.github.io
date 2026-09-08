@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education — Your Name</title>
+  <meta name="description" content="Education background of Your Name.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- SIDEBAR — same as index.html, but "Education" is marked active -->
+    <header class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <div>
+          <a href="index.html" class="site-name">Your Name</a>
+          <p class="site-tagline">Your Major, Class of 20XX</p>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">Menu</button>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="education.html" class="active" aria-current="page">Education</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <a href="assets/resume.pdf" class="resume-link">Resume (PDF)</a>
+        <div class="social-links">
+          <a href="https://github.com/yourusername">GitHub</a>
+          <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+          <a href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="content" id="main-content">
+      <div class="content-inner">
+
+        <div class="page-intro">
+          <h1>Education</h1>
+          <!-- TODO: optional one-line intro; delete this <p> if you don't want one -->
+          <p>A rundown of my academic background, coursework, and honors.</p>
+        </div>
+
+        <!-- ==============================================================
+             TIMELINE — one .timeline-entry per school. Copy the whole
+             block (including the surrounding comment lines) to add a
+             second school — e.g. if you transferred, or want to list
+             high school too.
+             ============================================================== -->
+        <div class="timeline">
+
+          <div class="timeline-entry">
+            <div class="timeline-date">
+              <!-- TODO: replace with your actual date range -->
+              2023 – 2027
+            </div>
+            <div class="timeline-details">
+              <!-- TODO: degree + major -->
+              <h3>Bachelor of Science in Your Major</h3>
+              <!-- TODO: school name and location -->
+              <p class="timeline-org">Your University, City, State</p>
+
+              <!-- TODO: replace with a couple of sentences: GPA (if you want
+                   to include it), honors, relevant minor, study abroad, etc.
+                   Delete this <p> entirely if you'd rather skip straight to
+                   coursework. -->
+              <p>GPA: 3.XX / 4.00. Dean's List (semesters). Minor in [subject], if applicable.</p>
+
+              <!-- TODO: list 4–8 courses most relevant to the work you want.
+                   Delete this whole <div> if you don't want a coursework list. -->
+              <div>
+                <p class="meta" style="margin-bottom: 0.25rem;">Relevant coursework</p>
+                <ul>
+                  <li>Course Name One</li>
+                  <li>Course Name Two</li>
+                  <li>Course Name Three</li>
+                  <li>Course Name Four</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example of a second entry — e.g. an earlier school or a
+               study-abroad program. Delete this block if you only have
+               one entry. -->
+          <div class="timeline-entry">
+            <div class="timeline-date">
+              2021 – 2023
+            </div>
+            <div class="timeline-details">
+              <h3>Associate of Science</h3>
+              <p class="timeline-org">Community College Name, City, State</p>
+              <p>Completed general education requirements before transferring.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Your Name. Built with HTML, CSS, and JS.</p>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
