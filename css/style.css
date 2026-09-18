@@ -507,8 +507,6 @@ img {
   border-radius: var(--radius);
 }
 
-/* Stack the images below the text on narrow screens instead of
-   squeezing them into a cramped side column */
 @media (max-width: 800px) {
   .project-body {
     grid-template-columns: 1fr;
