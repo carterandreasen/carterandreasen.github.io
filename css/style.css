@@ -147,6 +147,11 @@ img {
   max-width: 760px;
 }
 
+/* Projects page gets the full available width */
+.content-inner.projects-page {
+  max-width: none;
+}
+
 .page-intro {
   margin-bottom: 3rem;
 }
@@ -387,13 +392,6 @@ img {
 
 .timeline-details li {
   margin-bottom: 0.4em;
-}
-
-/* --- Project list (Projects page) ---
-   Uses the same date-column rhythm as the timeline for visual
-   consistency across the site. */
-.projects-page .content-inner {
-  max-width: none;
 }
 
 .projects-page .project-body {
