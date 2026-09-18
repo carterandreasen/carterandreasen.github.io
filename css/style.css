@@ -431,6 +431,10 @@ img {
   color: inherit;           /* Stops the <a> from turning the text link-blue */
 }
 
+.preview-item:hover h3 {
+  color: var(--color-accent);
+}
+
 .preview-item:first-child {
   border-top: 1px solid var(--color-line);
 }
