@@ -441,8 +441,8 @@ img {
    (keep them equal) to resize. */
 .hero-photo {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 32px;
+  right: 64px;
   width: 240px;
   height: 240px;
   border-radius: 50%;
