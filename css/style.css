@@ -426,6 +426,9 @@ img {
 .preview-item {
   padding: 1.25rem 0;
   border-bottom: 1px solid var(--color-line);
+  display: block;           /* Makes the <a> act like a block, not inline text */
+  text-decoration: none;    /* Removes the default link underline */
+  color: inherit;           /* Stops the <a> from turning the text link-blue */
 }
 
 .preview-item:first-child {
