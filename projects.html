@@ -64,37 +64,47 @@
              ============================================================== -->
         <div class="timeline">
 
-          <!-- TODO: duplicate this entire .project-entry block per project -->
+          <!-- Duplicate entire .project-entry block per project -->
           <div class="project-entry">
             <div class="timeline-date">
-              <!-- TODO: when you built it, e.g. "Spring 2026" -->
               Spring 2026
             </div>
             <div class="timeline-details">
-              <!-- TODO: project name -->
-              <h3>Project One Name</h3>
+              <h3>A Classic: House Price Prediction</h3>
 
-              <!-- TODO: 2–3 sentences: what it does, why you built it, and
-                   any interesting technical detail worth calling out. -->
               <p>
-                A short description of what this project does, who it's
-                for, and what problem it solves. Mention anything
-                technically interesting about how you built it.
+                This was a team project while I was abroad! We trained and compared
+                a <u>linear regression</u> model as a baseline against a <u>PyTorch</u>
+                neural network (132 → 128 → 64 → 1). We did this to predict house sale
+                prices from a Kaggle dataset of 4,140 property records. After preprocessing,
+                one-hot encoding location features, and trimming price outliers, both
+                models reached an R² of about 0.8, with linear regression slightly
+                outperforming the neural net (0.817 vs. 0.806). 
+              </p>
+              <p>
+                <b>Takeaway 1:</b> What increased R² the most for us was actually
+                not model selection, but outlier removal. A given goal for our project was
+                overall strong generalization, so we justified the removal of outliers with the significant 
+                jump in R². See the attached slides for our discussion of this point!
+              </p>
+              <p>
+                <b>Takeaway 2:</b> The majority of our coding time was spent 
+                setting up the neural net, all for it to slightly underperform simple 
+                linear regression. Simplicity is a feature in itself and should be considered!
               </p>
 
-              <!-- TODO: list the languages/frameworks/tools you used.
-                   Add or remove <li> items as needed. -->
               <ul class="tag-list">
                 <li class="tag">Python</li>
-                <li class="tag">React</li>
-                <li class="tag">PostgreSQL</li>
+                <li class="tag">PyTorch</li>
+                <li class="tag">scikit-learn</li>
+                <li class="tag">pandas</li>
               </ul>
 
-              <!-- TODO: point these at your real repo/demo. Delete
-                   whichever link doesn't apply. -->
+              <!-- TODO: see the two options below for these links -->
               <div class="project-links">
-                <a href="https://github.com/yourusername/project-one">View code →</a>
-                <a href="https://your-demo-link.com">Live demo →</a>
+                <a href="assets/project_intro_ai/ai_main_project.ipynb" target="_blank" rel="noopener noreferrer">View our code →</a>
+                <a href="assets/project_intro_ai/Intro to AI Final Presentation.pdf" target="_blank" rel="noopener noreferrer">View slides →</a>
+                <a href="assets/project_intro_ai/Intro to AI Final Project.pdf" target="_blank" rel="noopener noreferrer">View our final report →</a>
               </div>
             </div>
           </div>
