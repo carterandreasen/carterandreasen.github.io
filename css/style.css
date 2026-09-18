@@ -507,7 +507,7 @@ img {
 .projects-page .project-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 2rem;
+  gap: 1rem;
   align-items: start;
 }
 
