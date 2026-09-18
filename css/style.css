@@ -42,7 +42,7 @@
   --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
 
   /* Layout sizing */
-  --sidebar-width: 220px;
+  --sidebar-width: 230px;
   --measure: 640px; /* max width for readable paragraph text */
   --radius: 3px;    /* small, consistent corner radius used everywhere */
 }
