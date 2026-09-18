@@ -140,6 +140,7 @@ img {
   flex: 1;
   min-width: 0; /* prevents flex overflow on long unbreakable text */
   padding: 3.5rem 3rem 5rem;
+  position: relative;
 }
 
 .content-inner {
@@ -433,6 +434,28 @@ img {
 
 .preview-item h3 {
   margin-bottom: 0.25rem;
+}
+
+/* Homepage headshot — sits in the top-right corner of the page.
+   Nudge `top`/`right` to reposition it, or `width`/`height`
+   (keep them equal) to resize. */
+.hero-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-line);
+}
+
+/* Hide it below ~1150px wide — .content isn't roomy enough there
+   for a photo beside your hero text without overlapping it. */
+@media (max-width: 1150px) {
+  .hero-photo {
+    display: none;
+  }
 }
 
 /* Contact page */
