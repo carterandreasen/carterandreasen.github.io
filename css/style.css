@@ -486,6 +486,35 @@ img {
   min-width: 90px;
 }
 
+/* Projects page */ 
+/* Two-column layout for a project's text + stacked graph images */
+.project-body {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-media img {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+/* Stack the images below the text on narrow screens instead of
+   squeezing them into a cramped side column */
+@media (max-width: 800px) {
+  .project-body {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* --------------------------------------------------------------------------
    7. FOOTER
