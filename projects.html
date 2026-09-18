@@ -63,51 +63,60 @@
              and Experience pages.
              ============================================================== -->
         <div class="timeline">
-
-          <!-- Duplicate entire .project-entry block per project -->
+          <!-- First project entry -->
           <div class="project-entry" id="house-price-prediction">
             <div class="timeline-date">
               Spring 2026
             </div>
             <div class="timeline-details">
-              <h3>A Classic: House Price Prediction</h3>
+              <div class="project-body">
 
-              <p>
-                <b>Overview: </b>This was a team project while I was abroad! We trained and compared
-                a <u>linear regression</u> model as a baseline against a <u>PyTorch</u>
-                neural network (132 → 128 → 64 → 1). We did this to predict house sale
-                prices from a Kaggle dataset of 4,140 property records. After preprocessing,
-                one-hot encoding location features, and trimming price outliers, both
-                models reached an R² of about 0.8, with linear regression slightly
-                outperforming the neural net (0.817 vs. 0.806). 
-              </p>
-              <p>
-                <b>Takeaway 1:</b> What increased R² the most for us was actually
-                not model selection, but outlier removal. A given goal for our project was
-                overall strong generalization, so we justified the removal of outliers with the significant 
-                jump in R². See the attached slides for our discussion of this point!
-              </p>
-              <p>
-                <b>Takeaway 2:</b> The majority of our coding time was spent 
-                setting up the neural net, all for it to slightly underperform simple 
-                linear regression. Simplicity is a feature in itself and should be considered!
-              </p>
+                <!-- Everything you already had goes in here, unchanged -->
+                <div class="project-text">
+                  <h3>A Classic: House Price Prediction</h3>
+                    <p>
+                      <b>Overview: </b>This was a team project while I was abroad! We trained and compared
+                      a <u>linear regression</u> model as a baseline against a <u>PyTorch</u>
+                      neural network (132 → 128 → 64 → 1). We did this to predict house sale
+                      prices from a Kaggle dataset of 4,140 property records. After preprocessing,
+                      one-hot encoding location features, and trimming price outliers, both
+                      models reached an R² of about 0.8, with linear regression slightly
+                      outperforming the neural net (0.817 vs. 0.806). 
+                    </p>
+                    <p>
+                      <b>Takeaway 1:</b> What increased R² the most for us was actually
+                      not model selection, but outlier removal. A given goal for our project was
+                      overall strong generalization, so we justified the removal of outliers with the significant 
+                      jump in R². See the attached slides for our discussion of this point!
+                    </p>
+                    <p>
+                      <b>Takeaway 2:</b> The majority of our coding time was spent 
+                      setting up the neural net, all for it to slightly underperform simple 
+                      linear regression. Simplicity is a feature in itself and should be considered!
+                    </p>
+                  <ul class="tag-list">
+                    <li class="tag">Python</li>
+                    <li class="tag">PyTorch</li>
+                    <li class="tag">scikit-learn</li>
+                    <li class="tag">pandas</li>
+                  </ul>
+                  <div class="project-links">
+                    <a href="assets/project_intro_ai/ai_main_project.ipynb" target="_blank" rel="noopener noreferrer">View our code →</a>
+                    <a href="assets/project_intro_ai/Intro to AI Final Presentation.pdf" target="_blank" rel="noopener noreferrer">View slides →</a>
+                    <a href="assets/project_intro_ai/Intro to AI Final Project.pdf" target="_blank" rel="noopener noreferrer">View our final report (With dataset link)→</a>
+                  </div>
+                </div>
 
-              <ul class="tag-list">
-                <li class="tag">Python</li>
-                <li class="tag">PyTorch</li>
-                <li class="tag">scikit-learn</li>
-                <li class="tag">pandas</li>
-              </ul>
+                <!-- NEW — stacked graph images -->
+                <div class="project-media">
+                  <img src="assets/project_intro_ai/intro_ai_pred_act_neural.png" alt="Scatter plots comparing predicted vs. actual house prices for the neural network.">
+                  <img src="assets/project_intro_ai/intro_ai_residuals.png" alt="Distributions of prediction residuals for both models.">
+                </div>
 
-              <!-- TODO: see the two options below for these links -->
-              <div class="project-links">
-                <a href="assets/project_intro_ai/ai_main_project.ipynb" target="_blank" rel="noopener noreferrer">View our code →</a>
-                <a href="assets/project_intro_ai/Intro to AI Final Presentation.pdf" target="_blank" rel="noopener noreferrer">View slides →</a>
-                <a href="assets/project_intro_ai/Intro to AI Final Project.pdf" target="_blank" rel="noopener noreferrer">View our final report (With dataset link)→</a>
               </div>
             </div>
           </div>
+         
 
         </div>
 
