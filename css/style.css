@@ -393,7 +393,7 @@ img {
    Uses the same date-column rhythm as the timeline for visual
    consistency across the site. */
 .projects-page .content-inner {
-  max-width: 1100px;
+  max-width: none;
 }
 
 .projects-page .project-body {
@@ -403,7 +403,11 @@ img {
   align-items: start;
 }
 
-   .project-entry {
+.projects-page .timeline-details {
+  padding-right: 0;
+}
+
+.project-entry {
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 2rem;
@@ -499,7 +503,7 @@ img {
 
 /* Projects Page */
 .projects-page .content-inner {
-  max-width: 1100px;
+  max-width: none;
 }
 
 .projects-page .project-body {
