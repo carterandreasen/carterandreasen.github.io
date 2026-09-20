@@ -63,6 +63,59 @@
              and Experience pages.
              ============================================================== -->
         <div class="timeline">
+          <!-- Second project entry -->
+          <div class="project-entry" id="house-price-prediction">
+            <div class="timeline-date">
+              Spring 2026
+            </div>
+            <div class="timeline-details">
+              <div class="project-body">
+
+                <div class="project-text">
+                  <h3>A Partnership with HeroContent: Marketing Pipeline for Lead Generation</h3>
+                    <p>
+                      <b>Overview: </b>While abroad, a group of 4 students, including myself, were
+                      given the opportunity to work with a local Czech Company. We developed a 
+                      data pipeline (python scripts) using Apify, Playwright, and Azure LLM 
+                      services to generate U.S. restaurant profiles that included contact information.
+                      This was done ahead of a U.S. market expansion as a way to generate potential leads 
+                      for the Prague-based social media marketing company <b>HeroContent</b>.
+                    </p>
+                    <p>
+                      <b>Takeaway 1:</b> Atomic Saving! We lost thousands of records (which were
+                      created using company-sponsored moodel tokens) because we did not implement atomic saving. 
+                      <u>Save early, and save often</u>, it will eventually save you from a worst nightmare. 
+                    </p>
+                    <p>
+                      <b>Takeaway 2:</b> If you can't explain the high-level pipeline functions in a
+                      sentence, look to simplify before you add more features. For this case: We scraped
+                      different restaurants through Apify, then used GPT 4o-Mini to enrich restaurant
+                      records with contact info.
+                    </p>
+                  <ul class="tag-list">
+                    <li class="tag">Python</li>
+                    <li class="tag">Apify</li>
+                    <li class="tag">Playwright</li>
+                    <li class="tag">ChatGPT 4o-Mini</li>
+                  </ul>
+                  <div class="project-links">
+                    <a href="assets/project_intro_ai/ai_main_project.ipynb" target="_blank" rel="noopener noreferrer">View our code →</a>
+                    <a href="assets/project_intro_ai/Intro to AI Final Presentation.pdf" target="_blank" rel="noopener noreferrer">View slides →</a>
+                    <a href="assets/project_intro_ai/Intro to AI Final Project.pdf" target="_blank" rel="noopener noreferrer">View our final report (With dataset link)→</a>
+                  </div>
+                </div>
+
+                <!-- Stacked graph images -->
+                <div class="project-media">
+                  <img src="assets/project_intro_ai/intro_ai_pred_act_neural.png" alt="Scatter plots comparing predicted vs. actual house prices for the neural network.">
+                  <img src="assets/project_intro_ai/intro_ai_residuals.png" alt="Distributions of prediction residuals for both models.">
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
           <!-- First project entry -->
           <div class="project-entry" id="house-price-prediction">
             <div class="timeline-date">
@@ -71,7 +124,6 @@
             <div class="timeline-details">
               <div class="project-body">
 
-                <!-- Everything you already had goes in here, unchanged -->
                 <div class="project-text">
                   <h3>A Classic: House Price Prediction</h3>
                     <p>
@@ -107,7 +159,7 @@
                   </div>
                 </div>
 
-                <!-- NEW — stacked graph images -->
+                <!-- Stacked graph images -->
                 <div class="project-media">
                   <img src="assets/project_intro_ai/intro_ai_pred_act_neural.png" alt="Scatter plots comparing predicted vs. actual house prices for the neural network.">
                   <img src="assets/project_intro_ai/intro_ai_residuals.png" alt="Distributions of prediction residuals for both models.">
